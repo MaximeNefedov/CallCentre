@@ -19,7 +19,7 @@ public class CallCentre {
     }
 
     public void handleCall() {
-        while (counter != 0) {
+        while (counter != 0 || !queue.isEmpty()) {
             try {
                 String person = queue.take();
                 System.out.printf("%s начал обработку звонка %s\n", Thread.currentThread().getName(), person);

@@ -2,7 +2,7 @@ package Task1;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        CallCentre centre = new CallCentre(5);
+        CallCentre centre = new CallCentre(10);
         Thread generator = new Thread(centre::generateCall);
 
         Thread operator1 = new Thread(centre::handleCall, "Оператор 1");
